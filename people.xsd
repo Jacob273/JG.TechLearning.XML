@@ -2,14 +2,7 @@
 		   elementFormDefault="qualified" 
 		   xmlns:xs="http://www.w3.org/2001/XMLSchema">
 			
-  <xs:element name="People">
-    <xs:complexType>
-      <xs:sequence minOccurs="1">
-        <xs:element name="Person" maxOccurs="unbounded" type="PersonType">
-        </xs:element>
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
+  <xs:element name="People" type="PeopleType"/>
   
 	<xs:simpleType name="UpToThirdyFiveCharactersStringType">
 			<xs:restriction base="xs:string">
@@ -70,5 +63,12 @@
               <xs:element type="AddressType" name="Address"/>
             </xs:sequence>
   </xs:complexType>
+
+    <xs:complexType name="PeopleType">
+      <xs:sequence minOccurs="1">
+        <xs:element name="Person" maxOccurs="unbounded" type="PersonType">
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
 
 </xs:schema>
