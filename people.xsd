@@ -8,15 +8,15 @@
         <xs:element name="Person" maxOccurs="unbounded" minOccurs="0">
           <xs:complexType>
             <xs:sequence>
-              <xs:element type="UpToThirdyFiveCharactersString" name="FirstName" />
-              <xs:element type="UpToThirdyFiveCharactersString" name="LastName"/>
-              <xs:element type="ExactlyElevenCharactersString" name="Pesel"/>
-              <xs:element type="Date" name="BirthDate"/>
-              <xs:element type="Gender" name="Gender"/>
+              <xs:element type="UpToThirdyFiveCharactersStringType" name="FirstName" />
+              <xs:element type="UpToThirdyFiveCharactersStringType" name="LastName"/>
+              <xs:element type="ExactlyElevenCharactersStringType" name="Pesel"/>
+              <xs:element type="DateType" name="BirthDate"/>
+              <xs:element type="GenderType" name="Gender"/>
               <xs:element type="xs:int" name="PhoneNumber"/>
               <xs:element type="xs:string" name="Email"/>
               <xs:element type="xs:string" name="Profession"/>
-              <xs:element name="Address" type="Address"/>
+              <xs:element type="AddressType" name="Address"/>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
@@ -24,49 +24,49 @@
     </xs:complexType>
   </xs:element>
   
-	<xs:simpleType name="UpToThirdyFiveCharactersString">
+	<xs:simpleType name="UpToThirdyFiveCharactersStringType">
 			<xs:restriction base="xs:string">
 				<xs:pattern value="[a-zA-Z0-9]{1,35}"/>
 			</xs:restriction>
 	</xs:simpleType>
 
-	<xs:simpleType name="UpToTenCharactersString">
+	<xs:simpleType name="UpToTenCharactersStringType">
 			<xs:restriction base="xs:string">
 				<xs:pattern value="[a-zA-Z0-9]{1,10}"/>
 			</xs:restriction>
 	</xs:simpleType>
 
 
-	<xs:simpleType name="ExactlyElevenCharactersString">
+	<xs:simpleType name="ExactlyElevenCharactersStringType">
 			<xs:restriction base="xs:string">
 				<xs:pattern value="[0-9]{11}"/>
 			</xs:restriction>
 	</xs:simpleType>
 
-	<xs:simpleType name="PostalCodeString">
+	<xs:simpleType name="PostalCodeStringType">
 			<xs:restriction base="xs:string">
 				<xs:pattern value="[0-9]{2}\-[0-9]{3}"/>
 			</xs:restriction>
 	</xs:simpleType>
 
-	<xs:simpleType name="Date">
+	<xs:simpleType name="DateType">
     <xs:restriction base="xs:date"/>
 	</xs:simpleType>
 
-	<xs:simpleType name="Gender">
+	<xs:simpleType name="GenderType">
     <xs:restriction base="xs:string">
             <xs:enumeration value="M" />
             <xs:enumeration value="K" />
     </xs:restriction>
 	</xs:simpleType>
 
-  <xs:complexType name="Address">
+  <xs:complexType name="AddressType">
                   <xs:sequence>
-                    <xs:element name="Street" type="UpToThirdyFiveCharactersString" />
-                    <xs:element name="HouseNumber" type="UpToTenCharactersString" />
+                    <xs:element name="Street" type="UpToThirdyFiveCharactersStringType" />
+                    <xs:element name="HouseNumber" type="UpToTenCharactersStringType" />
                     <xs:element name="ApartmentNumber" type="xs:integer" />
-                    <xs:element name="City" type="UpToThirdyFiveCharactersString" />
-                    <xs:element name="PostalCode"  type="PostalCodeString" />
+                    <xs:element name="City" type="UpToThirdyFiveCharactersStringType" />
+                    <xs:element name="PostalCode"  type="PostalCodeStringType" />
                   </xs:sequence>
   </xs:complexType>
 
