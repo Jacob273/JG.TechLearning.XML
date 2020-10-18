@@ -11,22 +11,12 @@
               <xs:element type="UpToThirdyFiveCharactersString" name="FirstName" />
               <xs:element type="UpToThirdyFiveCharactersString" name="LastName"/>
               <xs:element type="ExactlyElevenCharactersString" name="Pesel"/>
-              <xs:element type="xs:date" name="BirthDate"/>
+              <xs:element type="Date" name="BirthDate"/>
               <xs:element type="Gender" name="Gender"/>
               <xs:element type="xs:int" name="PhoneNumber"/>
               <xs:element type="xs:string" name="Email"/>
               <xs:element type="xs:string" name="Profession"/>
-              <xs:element name="Address">
-                <xs:complexType>
-                  <xs:sequence>
-                    <xs:element type="xs:string" name="Street"/>
-                    <xs:element type="xs:string" name="City"/>
-                    <xs:element type="xs:byte" name="HouseNumber"/>
-                    <xs:element type="xs:byte" name="ApartmentNumber"/>
-                    <xs:element type="xs:string" name="PostalCode"/>
-                  </xs:sequence>
-                </xs:complexType>
-              </xs:element>
+              <xs:element name="Address" type="Address"/>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
@@ -40,11 +30,27 @@
 			</xs:restriction>
 	</xs:simpleType>
 
+	<xs:simpleType name="UpToTenCharactersString">
+			<xs:restriction base="xs:string">
+				<xs:pattern value="[a-zA-Z0-9]{1,10}"/>
+			</xs:restriction>
+	</xs:simpleType>
+
 
 	<xs:simpleType name="ExactlyElevenCharactersString">
-			<xs:restriction base="xs:long">
+			<xs:restriction base="xs:string">
 				<xs:pattern value="[0-9]{11}"/>
 			</xs:restriction>
+	</xs:simpleType>
+
+	<xs:simpleType name="PostalCodeString">
+			<xs:restriction base="xs:string">
+				<xs:pattern value="[0-9]{2}\-[0-9]{3}"/>
+			</xs:restriction>
+	</xs:simpleType>
+
+	<xs:simpleType name="Date">
+    <xs:restriction base="xs:date"/>
 	</xs:simpleType>
 
 	<xs:simpleType name="Gender">
@@ -53,5 +59,15 @@
             <xs:enumeration value="K" />
     </xs:restriction>
 	</xs:simpleType>
+
+  <xs:complexType name="Address">
+                  <xs:sequence>
+                    <xs:element name="Street" type="UpToThirdyFiveCharactersString" />
+                    <xs:element name="HouseNumber" type="UpToTenCharactersString" />
+                    <xs:element name="ApartmentNumber" type="xs:integer" />
+                    <xs:element name="City" type="UpToThirdyFiveCharactersString" />
+                    <xs:element name="PostalCode"  type="PostalCodeString" />
+                  </xs:sequence>
+  </xs:complexType>
 
 </xs:schema>
