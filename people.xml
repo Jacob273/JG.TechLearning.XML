@@ -12,10 +12,10 @@
       <Profession>Software Developer</Profession>
       <Address>
           <Street>Mickiewicza</Street>
-          <City>Szczecin</City>
           <HouseNumber>27</HouseNumber>
           <ApartmentNumber>3</ApartmentNumber>
-		      <PostalCode>71-633</PostalCode>
+           <City>Szczecin</City>
+		  <PostalCode>71-633</PostalCode>
       </Address>
   </Person>
 
@@ -30,9 +30,9 @@
       <Profession>It Specialist</Profession>
       <Address>
           <Street>Wyszynskiego</Street>
-          <City>Szczecin</City>
           <HouseNumber>27</HouseNumber>
           <ApartmentNumber>3</ApartmentNumber>
+           <City>Szczecin</City>
           <PostalCode>71-666</PostalCode>
       </Address>
   </Person>
@@ -48,9 +48,9 @@
       <Profession>Business Analyst</Profession>
       <Address>
           <Street>Parkowa</Street>
-          <City>Szczecin</City>
           <HouseNumber>33</HouseNumber>
           <ApartmentNumber>5</ApartmentNumber>
+          <City>Szczecin</City>
           <PostalCode>71-634</PostalCode>
       </Address>
   </Person>
@@ -66,9 +66,9 @@
       <Profession>Tester</Profession>
       <Address>
           <Street>Straszna</Street>
-          <City>Szczecin</City>
           <HouseNumber>27</HouseNumber>
           <ApartmentNumber>3</ApartmentNumber>
+          <City>Szczecin</City>
           <PostalCode>71-633</PostalCode>
       </Address>
   </Person>
@@ -84,9 +84,9 @@
       <Profession>Sales Specialist</Profession>
       <Address>
           <Street>Brazowa</Street>
-          <City>Szczecin</City>
           <HouseNumber>27</HouseNumber>
           <ApartmentNumber>3</ApartmentNumber>
+          <City>Szczecin</City>
           <PostalCode>71-222</PostalCode>
       </Address>
   </Person>
