@@ -8,7 +8,7 @@
         <xs:element name="Person" maxOccurs="unbounded" minOccurs="0">
           <xs:complexType>
             <xs:sequence>
-              <xs:element type="UpToThirdyFiveCharacters" name="FirstName" />
+              <xs:element type="UpToThirdyFiveCharactersString" name="FirstName" />
               <xs:element type="xs:string" name="LastName"/>
               <xs:element type="xs:long" name="Pesel"/>
               <xs:element type="xs:date" name="BirthDate"/>
@@ -34,9 +34,9 @@
     </xs:complexType>
   </xs:element>
   
-	<xs:simpleType name="UpToThirdyFiveCharacters">
+	<xs:simpleType name="UpToThirdyFiveCharactersString">
 			<xs:restriction base="xs:string">
-				<xs:pattern value="[a-zA-Z0-9]{0,35}"/>
+				<xs:pattern value="[a-zA-Z0-9]{1,35}"/>
 			</xs:restriction>
 	</xs:simpleType>
 </xs:schema>
