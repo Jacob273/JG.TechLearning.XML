@@ -12,7 +12,7 @@
               <xs:element type="UpToThirdyFiveCharactersString" name="LastName"/>
               <xs:element type="ExactlyElevenCharactersString" name="Pesel"/>
               <xs:element type="xs:date" name="BirthDate"/>
-              <xs:element type="xs:string" name="Gender"/>
+              <xs:element type="Gender" name="Gender"/>
               <xs:element type="xs:int" name="PhoneNumber"/>
               <xs:element type="xs:string" name="Email"/>
               <xs:element type="xs:string" name="Profession"/>
@@ -45,6 +45,13 @@
 			<xs:restriction base="xs:long">
 				<xs:pattern value="[0-9]{11}"/>
 			</xs:restriction>
+	</xs:simpleType>
+
+	<xs:simpleType name="Gender">
+    <xs:restriction base="xs:string">
+            <xs:enumeration value="M" />
+            <xs:enumeration value="K" />
+    </xs:restriction>
 	</xs:simpleType>
 
 </xs:schema>

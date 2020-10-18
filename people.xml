@@ -6,7 +6,7 @@
       <LastName>Gmur</LastName>
       <Pesel>92010177788</Pesel>
       <BirthDate>1992-01-01</BirthDate>
-      <Gender>Male</Gender>
+      <Gender>M</Gender>
       <PhoneNumber>500111222</PhoneNumber>
       <Email>gj23702@zut.edu.pl</Email>
       <Profession>Software Developer</Profession>
@@ -24,7 +24,7 @@
       <LastName>Torkonska</LastName>
       <Pesel>93010177788</Pesel>
       <BirthDate>1993-01-01</BirthDate>
-      <Gender>Female</Gender>
+      <Gender>K</Gender>
       <PhoneNumber>600111222</PhoneNumber>
       <Email>at26702@zut.edu.pl</Email>
       <Profession>It Specialist</Profession>
@@ -42,7 +42,7 @@
       <LastName>Toskanski</LastName>
       <Pesel>94010177788</Pesel>
       <BirthDate>1994-01-01</BirthDate>
-      <Gender>Male</Gender>
+      <Gender>M</Gender>
       <PhoneNumber>700111222</PhoneNumber>
       <Email>at27702@zut.edu.pl</Email>
       <Profession>Business Analyst</Profession>
@@ -60,7 +60,7 @@
       <LastName>Szybki</LastName>
       <Pesel>95010177788</Pesel>
       <BirthDate>1995-01-01</BirthDate>
-      <Gender>Male</Gender>
+      <Gender>M</Gender>
       <PhoneNumber>800111222</PhoneNumber>
       <Email>js28702@zut.edu.pl</Email>
       <Profession>Tester</Profession>
@@ -78,7 +78,7 @@
       <LastName>Manikowska</LastName>
       <Pesel>90010177788</Pesel>
       <BirthDate>1996-01-01</BirthDate>
-      <Gender>Female</Gender>
+      <Gender>K</Gender>
       <PhoneNumber>900111222</PhoneNumber>
       <Email>am29702@zut.edu.pl</Email>
       <Profession>Sales Specialist</Profession>
