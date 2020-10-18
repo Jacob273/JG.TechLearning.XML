@@ -5,20 +5,7 @@
   <xs:element name="People">
     <xs:complexType>
       <xs:sequence>
-        <xs:element name="Person" maxOccurs="unbounded" minOccurs="0">
-          <xs:complexType>
-            <xs:sequence>
-              <xs:element type="UpToThirdyFiveCharactersStringType" name="FirstName" />
-              <xs:element type="UpToThirdyFiveCharactersStringType" name="LastName"/>
-              <xs:element type="ExactlyElevenCharactersStringType" name="Pesel"/>
-              <xs:element type="DateType" name="BirthDate"/>
-              <xs:element type="GenderType" name="Gender"/>
-              <xs:element type="xs:int" name="PhoneNumber"/>
-              <xs:element type="xs:string" name="Email"/>
-              <xs:element type="xs:string" name="Profession"/>
-              <xs:element type="AddressType" name="Address"/>
-            </xs:sequence>
-          </xs:complexType>
+        <xs:element name="Person" maxOccurs="unbounded" minOccurs="0" type="PersonType">
         </xs:element>
       </xs:sequence>
     </xs:complexType>
@@ -68,6 +55,20 @@
                     <xs:element name="City" type="UpToThirdyFiveCharactersStringType" />
                     <xs:element name="PostalCode"  type="PostalCodeStringType" />
                   </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name ="PersonType">
+            <xs:sequence>
+              <xs:element type="UpToThirdyFiveCharactersStringType" name="FirstName" />
+              <xs:element type="UpToThirdyFiveCharactersStringType" name="LastName"/>
+              <xs:element type="ExactlyElevenCharactersStringType" name="Pesel"/>
+              <xs:element type="DateType" name="BirthDate"/>
+              <xs:element type="GenderType" name="Gender"/>
+              <xs:element type="xs:int" name="PhoneNumber"/>
+              <xs:element type="xs:string" name="Email"/>
+              <xs:element type="xs:string" name="Profession"/>
+              <xs:element type="AddressType" name="Address"/>
+            </xs:sequence>
   </xs:complexType>
 
 </xs:schema>
