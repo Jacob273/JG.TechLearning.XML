@@ -1,0 +1,42 @@
+<xs:schema attributeFormDefault="unqualified" 
+		   elementFormDefault="qualified" 
+		   xmlns:xs="http://www.w3.org/2001/XMLSchema">
+			
+  <xs:element name="People">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="Person" maxOccurs="unbounded" minOccurs="0">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element type="UpToThirdyFiveCharacters" name="FirstName" />
+              <xs:element type="xs:string" name="LastName"/>
+              <xs:element type="xs:long" name="Pesel"/>
+              <xs:element type="xs:date" name="BirthDate"/>
+              <xs:element type="xs:string" name="Gender"/>
+              <xs:element type="xs:int" name="PhoneNumber"/>
+              <xs:element type="xs:string" name="Email"/>
+              <xs:element type="xs:string" name="Profession"/>
+              <xs:element name="Address">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="xs:string" name="Street"/>
+                    <xs:element type="xs:string" name="City"/>
+                    <xs:element type="xs:byte" name="HouseNumber"/>
+                    <xs:element type="xs:byte" name="ApartmentNumber"/>
+                    <xs:element type="xs:string" name="PostalCode"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  
+	<xs:simpleType name="UpToThirdyFiveCharacters">
+			<xs:restriction base="xs:string">
+				<xs:pattern value="[a-zA-Z0-9]{0,35}"/>
+			</xs:restriction>
+	</xs:simpleType>
+</xs:schema>
