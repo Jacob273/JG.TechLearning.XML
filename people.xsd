@@ -9,8 +9,8 @@
           <xs:complexType>
             <xs:sequence>
               <xs:element type="UpToThirdyFiveCharactersString" name="FirstName" />
-              <xs:element type="xs:string" name="LastName"/>
-              <xs:element type="xs:long" name="Pesel"/>
+              <xs:element type="UpToThirdyFiveCharactersString" name="LastName"/>
+              <xs:element type="ExactlyElevenCharactersString" name="Pesel"/>
               <xs:element type="xs:date" name="BirthDate"/>
               <xs:element type="xs:string" name="Gender"/>
               <xs:element type="xs:int" name="PhoneNumber"/>
@@ -39,4 +39,12 @@
 				<xs:pattern value="[a-zA-Z0-9]{1,35}"/>
 			</xs:restriction>
 	</xs:simpleType>
+
+
+	<xs:simpleType name="ExactlyElevenCharactersString">
+			<xs:restriction base="xs:long">
+				<xs:pattern value="[0-9]{11}"/>
+			</xs:restriction>
+	</xs:simpleType>
+
 </xs:schema>
