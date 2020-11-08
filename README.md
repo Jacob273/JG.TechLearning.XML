@@ -5,4 +5,6 @@
 * __XSD__ can be used to express a set of rules to which an XML document must conform in order to be considered "valid" according to that schema
 * __XSLT__ (Extensible Stylesheet Language Transformations) is a language for transforming XML documents into other XML documents
 * __XPath__ uses path expressions to select nodes or node-sets in an XML document
+* __XSL-FO__ is a markup language for XML document formatting that is most often used to generate PDF files
+
 
