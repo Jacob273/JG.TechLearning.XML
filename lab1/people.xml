@@ -1,0 +1,93 @@
+<?xml version="1.0"?>
+<People>
+  <Person>
+      <FirstName>Jakub</FirstName>
+      <LastName>Gmur</LastName>
+      <Pesel>92010177788</Pesel>
+      <BirthDate>1992-01-01</BirthDate>
+      <Gender>Male</Gender>
+      <PhoneNumber>500111222</PhoneNumber>
+      <Email>gj23702@zut.edu.pl</Email>
+      <Profession>Software Developer</Profession>
+      <Address>
+          <Street>Mickiewicza</Street>
+          <City>Szczecin</City>
+          <HouseNumber>27</HouseNumber>
+          <ApartmentNumber>3</ApartmentNumber>
+		      <PostalCode>71-633</PostalCode>
+      </Address>
+  </Person>
+
+  <Person>
+      <FirstName>Anna</FirstName>
+      <LastName>Torkonska</LastName>
+      <Pesel>93010177788</Pesel>
+      <BirthDate>1993-01-01</BirthDate>
+      <Gender>Female</Gender>
+      <PhoneNumber>600111222</PhoneNumber>
+      <Email>at26702@zut.edu.pl</Email>
+      <Profession>It Specialist</Profession>
+      <Address>
+          <Street>Wyszynskiego</Street>
+          <City>Szczecin</City>
+          <HouseNumber>27</HouseNumber>
+          <ApartmentNumber>3</ApartmentNumber>
+          <PostalCode>71-666</PostalCode>
+      </Address>
+  </Person>
+  
+  <Person>
+      <FirstName>Andrzej</FirstName>
+      <LastName>Toskanski</LastName>
+      <Pesel>94010177788</Pesel>
+      <BirthDate>1994-01-01</BirthDate>
+      <Gender>Male</Gender>
+      <PhoneNumber>700111222</PhoneNumber>
+      <Email>at27702@zut.edu.pl</Email>
+      <Profession>Business Analyst</Profession>
+      <Address>
+          <Street>Parkowa</Street>
+          <City>Szczecin</City>
+          <HouseNumber>33</HouseNumber>
+          <ApartmentNumber>5</ApartmentNumber>
+          <PostalCode>71-634</PostalCode>
+      </Address>
+  </Person>
+  
+  <Person>
+      <FirstName>Jakub</FirstName>
+      <LastName>Szybki</LastName>
+      <Pesel>95010177788</Pesel>
+      <BirthDate>1995-01-01</BirthDate>
+      <Gender>Male</Gender>
+      <PhoneNumber>800111222</PhoneNumber>
+      <Email>js28702@zut.edu.pl</Email>
+      <Profession>Tester</Profession>
+      <Address>
+          <Street>Straszna</Street>
+          <City>Szczecin</City>
+          <HouseNumber>27</HouseNumber>
+          <ApartmentNumber>3</ApartmentNumber>
+          <PostalCode>71-633</PostalCode>
+      </Address>
+  </Person>
+  
+  <Person>
+      <FirstName>Angelika</FirstName>
+      <LastName>Manikowska</LastName>
+      <Pesel>90010177788</Pesel>
+      <BirthDate>1996-01-01</BirthDate>
+      <Gender>Female</Gender>
+      <PhoneNumber>900111222</PhoneNumber>
+      <Email>am29702@zut.edu.pl</Email>
+      <Profession>Sales Specialist</Profession>
+      <Address>
+          <Street>Brazowa</Street>
+          <City>Szczecin</City>
+          <HouseNumber>27</HouseNumber>
+          <ApartmentNumber>3</ApartmentNumber>
+          <PostalCode>71-222</PostalCode>
+      </Address>
+  </Person>
+  
+</People>
