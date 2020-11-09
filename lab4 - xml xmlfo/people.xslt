@@ -72,62 +72,71 @@
             </fo:table-row>
         </fo:table-header>
 
-<fo:table-body>
-                <fo:table-row>
-                    <fo:table-cell>
-                        <fo:block>John Doe</fo:block>
-                    </fo:table-cell>
-                    <fo:table-cell>
-                        <fo:block>1234</fo:block>
-                    </fo:table-cell>
-                </fo:table-row>
-<fo:table-row>
-                    <fo:table-cell>
-                        <fo:block>John Doe</fo:block>
-                    </fo:table-cell>
-                    <fo:table-cell>
-                        <fo:block>1234</fo:block>
-                    </fo:table-cell>
-                </fo:table-row>
-<fo:table-row>
-            </fo:table-body>
+        <fo:table-body>
+            <xsl:apply-templates/>
+        </fo:table-body>
       </fo:table>
   </xsl:template>
   
-        <!-- <xsl:apply-templates/> -->
 
   <xsl:template match="Person" xmlns:fo="http://www.w3.org/1999/XSL/Format">
         <fo:table-row>
-          <xsl:apply-templates select="FirstName"/>
-          <xsl:apply-templates select="LastName"/>
-          <xsl:apply-templates select="Pesel"/>
-          <xsl:apply-templates select="BirthDate"/>
-          <xsl:apply-templates select="Gender"/>
-          <xsl:apply-templates select="PhoneNumber"/>
-          <xsl:apply-templates select="Email"/>
-          <xsl:apply-templates select="Profession"/>
-          <xsl:apply-templates select="Address"/>
+            <fo:table-cell>
+                <xsl:apply-templates select="FirstName"/>
+            </fo:table-cell>
+            <fo:table-cell>
+                <xsl:apply-templates select="LastName"/>
+            </fo:table-cell>
+            <fo:table-cell>
+                <xsl:apply-templates select="Pesel"/>
+            </fo:table-cell>
+            <fo:table-cell>
+                <xsl:apply-templates select="BirthDate"/>
+            </fo:table-cell>
+            <fo:table-cell>
+                <xsl:apply-templates select="Gender"/>
+            </fo:table-cell>
+            <fo:table-cell>
+                <xsl:apply-templates select="PhoneNumber"/>
+            </fo:table-cell>
+            <fo:table-cell>
+                <xsl:apply-templates select="Email"/>
+            </fo:table-cell>
+            <fo:table-cell>
+                <xsl:apply-templates select="Profession"/>
+            </fo:table-cell>
+            <xsl:apply-templates select="Address"/>
           </fo:table-row>
   </xsl:template>
   
   <xsl:template match="FirstName|LastName|Pesel|BirthDate|Gender|PhoneNumber|Email|Profession" xmlns:fo="http://www.w3.org/1999/XSL/Format">
-      <fo:table-cell>
+      <fo:block wrap-option="wrap">
         <xsl:value-of select="."></xsl:value-of>
-      </fo:table-cell>
+      </fo:block>
   </xsl:template>
   
   
   <xsl:template match="Address" xmlns:fo="http://www.w3.org/1999/XSL/Format">
-    <xsl:apply-templates select="Street"/>
-      <xsl:apply-templates select="HouseNumber"/>
-      <xsl:apply-templates select="ApartmentNumber"/>
-      <xsl:apply-templates select="City"/>
-      <xsl:apply-templates select="PostalCode"/>
+      <fo:table-cell>
+        <xsl:apply-templates select="Street"/>
+      </fo:table-cell>
+      <fo:table-cell>
+        <xsl:apply-templates select="HouseNumber"/>
+      </fo:table-cell>
+      <fo:table-cell>
+        <xsl:apply-templates select="ApartmentNumber"/>
+      </fo:table-cell>
+      <fo:table-cell>
+        <xsl:apply-templates select="City"/>
+      </fo:table-cell>
+      <fo:table-cell>
+        <xsl:apply-templates select="PostalCode"/>
+      </fo:table-cell>
   </xsl:template>
   
 <xsl:template match="Street|HouseNumber|ApartmentNumber|City|Gender|PostalCode" xmlns:fo="http://www.w3.org/1999/XSL/Format">
-      <fo:table-cell>
-       <xsl:value-of select="."></xsl:value-of>
-      </fo:table-cell>
+      <fo:block wrap-option="wrap">
+          <xsl:value-of select="."></xsl:value-of>
+      </fo:block>
   </xsl:template>
 </xsl:stylesheet>
