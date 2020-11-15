@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width">
+  <title>XML to DOM to HTML</title>
+
+  <style>
+    td,
+    th {
+      width: 6rem;
+      height: 2rem;
+      border: 1px solid #ccc;
+      text-align: center;
+    }
+
+    th {
+      background: lightblue;
+      border-color: white;
+    }
+
+    body {
+      padding: 1rem;
+    }
+  </style>
+
+
+</head>
+
+
+<body onLoad="loadPeopleFromXMl()">
+  <h1>Lista osób</h1>
+
+  <table id="peopleTable">
+    <tr>
+      <th>Imie</th>
+      <th>Nazwisko</th>
+      <th>Pesel</th>
+      <th>Data urodzenia</th>
+      <th>Płeć</th>
+      <th>Telefon</th>
+      <th>Email</th>
+      <th>Zawód</th>
+      <th>Ulica</th>
+      <th>Nr domu</th>
+      <th>Nr lokalu </th>
+      <th>Miasto</th>
+      <th>Kod pocztowy</th>
+    </tr>
+  </table>
+
+</body>
+
+<script>
+  function loadPeopleFromXMl() {
+    const xmlFileName = 'people.xml';
+    console.log(`Starred loading file: <${xmlFileName}>...}`);
+
+    var xhr = new XMLHttpRequest();
+    xhr.open('GET', xmlFileName, true);
+    xhr.send();
+
+    xhr.onload = function () {
+      console.log(`File: <${xmlFileName}> loaded succesfully}`);
+
+      var xmlDoc = this.responseXML.documentElement;
+
+      var personNodes = xmlDoc.getElementsByTagName("Person");
+      var peopleHtmlTable = document.getElementById("peopleTable");
+
+      for (var i = 0; i < personNodes.length; i++) {
+        //for each person, we create a node
+        let newRow = peopleHtmlTable.insertRow(-1);
+        console.log(`Adding new row: <${i}>`);
+        var childNodesCount = personNodes[i].childElementCount;
+        for (var j = 0; j < childNodesCount; j++) {
+          var children = personNodes[i].children[j];
+          
+          //for each children we create a cell or iterate to grandchild
+          if (children.childElementCount > 0) 
+          {
+            for (var k = 0; k < children.childElementCount; k++) 
+            {
+              var grandChild = personNodes[i].children[j].children[k];
+              addCellWithTextToRow(newRow, grandChild.textContent);
+            }
+          }
+          else 
+          {
+            addCellWithTextToRow(newRow, children.textContent);
+          }
+        }
+      }
+    };
+  }
+
+  function addCellWithTextToRow(row, text) {
+    let newCell = row.insertCell(-1);
+    let newText = document.createTextNode(text);
+    newCell.appendChild(newText);
+  }
+</script>
+
+</html>
