@@ -56,7 +56,7 @@
 <script>
   function loadPeopleFromXMl() {
     const xmlFileName = 'people.xml';
-    console.log(`Starred loading file: <${xmlFileName}>...}`);
+    console.log(`Started loading file: <${xmlFileName}>...}`);
 
     var xhr = new XMLHttpRequest();
     xhr.open('GET', xmlFileName, true);
@@ -71,14 +71,15 @@
       var peopleHtmlTable = document.getElementById("peopleTable");
 
       for (var i = 0; i < personNodes.length; i++) {
-        //for each person, we create a node
+        //for each person, we create a row
         let newRow = peopleHtmlTable.insertRow(-1);
         console.log(`Adding new row: <${i}>`);
         var childNodesCount = personNodes[i].childElementCount;
         for (var j = 0; j < childNodesCount; j++) {
           var children = personNodes[i].children[j];
           
-          //for each children we create a cell or iterate to grandchild
+          //for each children we create a cell 
+          //or iterate to grandchild and for reach grandchild we create a cell
           if (children.childElementCount > 0) 
           {
             for (var k = 0; k < children.childElementCount; k++) 
